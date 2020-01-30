@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import './components/projectList.js' ;
 import ProjectList from './components/projectList.js';
@@ -7,6 +6,14 @@ import ProjectList from './components/projectList.js';
 function App() {
   return (
 <div className="App">
+{/* <!-- Custom fonts for this template --> */}
+      <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet"/>
+      <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet"/>
+      <link href="./vendor/fontawesome-free/css/all.min.css" rel="stylesheet"/>
+
+      {/* <!-- Custom styles for this template --> */}
+      <link href="./css/resume.min.css" rel="stylesheet"/>
+
     
   
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
@@ -36,11 +43,11 @@ function App() {
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
         </li>
-        {/* 
-        <!-- <li class="nav-item">
+        
+       <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#awards">Awards</a>
-        </li> -->
-        */}
+        </li> 
+       
       </ul>
     </div>
   </nav>
@@ -197,15 +204,7 @@ function App() {
 
     </div>
 
-    {/* <!-- Bootstrap core JavaScript --> */}
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  {/* <!-- Plugin JavaScript --> */}
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-  {/* <!-- Custom scripts for this template --> */}
-  <script src="js/resume.min.js"></script>
 
   {/** closing body tag for all resume components (project, education ...) */}
   
