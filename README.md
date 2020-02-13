@@ -1,4 +1,25 @@
+
+
+
+> Written with [StackEdit](https://stackedit.io/).
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Portfolio Website Code
+serverless **ReactJS** portfolio website deployed to Nelify. (see [https://www.netlify.com](https://www.netlify.com)) Truly free static serverless websites with free SSL certificate management. Best option for efficient and free personal websites. 
+
+## tools
+
+* **ReactJS** 
+	
+
+* **react-axios** - *react version of **Axios** (popular nodejs package to for REST calls with promises)*
+	* GET request of dynamic list of projects and their properies {Descriptions,Languages... }
+	
+* **Netlify** -  *Hosting service for static websites*
+	* Set-up continuous and automatic deployment when changes are made
+
+
+---
+# React Documentation 
 
 ## Available Scripts
 
