@@ -101,7 +101,7 @@ function githubAPI_GET_Projects(githubAPI_URL, username){
                 }
             
 
-                response.data.sort( (repo1,repo2)=> ( priority_projects.arduinoprojects.test(repo1.name) || priority_projects.honours.test(repo1.name) || priority_projects.dataScience.test(repo1.name) ? -1: 1)) ;     
+                response.data.sort( (repo1,repo2)=> ( priority_projects.arduinoprojects.test(repo1.name) || priority_projects.honours.test(repo1.name)  ? -1: 1)) ;     
                 
                 
                 // response.data.sort( (repo1,repo2)=> {
