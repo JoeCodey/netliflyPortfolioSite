@@ -67,10 +67,10 @@ function App() {
 
         <p class="lead mb-5">Seeking exciting and fulfilling opportunities to start my career, and to contribute to the development of successful, innovative and creative technologies that make an impact on how people live and work.</p>
         <div class="social-icons">
-          <a href="https://www.linkedin.com/in/joseph-lefebvre123/">
+          <a href="https://www.linkedin.com/in/joseph-lefebvre123/" target="_blank">
             <i class="fab fa-linkedin-in"></i>
           </a>
-          <a href="https://github.com/JoeCodey">
+          <a href="https://github.com/JoeCodey" target="_blank">
             <i class="fab fa-github"></i>
           </a>
           {/* 

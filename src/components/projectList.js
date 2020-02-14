@@ -30,7 +30,7 @@ class IndivProject extends React.Component{
 
                 </div>
                 <div class="resume-date text-md-right">
-                <span class="text-primary"><a href={this.props.svn_url}>See more detail on Github! <i class="fab fa-github"> </i> </a></span>
+                <span class="text-primary"><a href={this.props.svn_url} target="_blank">See more detail on Github! <i class="fab fa-github"> </i> </a></span>
                 </div>
             </div>
         </div> 
