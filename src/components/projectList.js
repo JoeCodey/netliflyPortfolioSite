@@ -96,13 +96,25 @@ function githubAPI_GET_Projects(githubAPI_URL, username){
                 */}
                 
                 for(let i=0 ; i <response.data.length ; i++){
-                    console.log(`${response.data[i].name} : ${priority_projects.arduinoprojects.test(response.data[i].name)}` );
+                    if(priority_projects.honours.test(response.data[i].name)){
+                        //force Honours project to be 3rd in list 
+                        let temp = response.data[3] ; //save current project in 4th position of website
+                        response.data[3] = response.data[i] ;
+                        response.data[i] = temp ; 
+                    }
+                    //console.log(`${response.data[i].name} : ${priority_projects.arduinoprojects.test(response.data[i].name)}` );
 
                 }
+                
+
+                //response.data.sort( (repo1,repo2)=> ( priority_projects.arduinoprojects.test(repo1.name) || priority_projects.honours.test(repo1.name)  ? -1: 1)) ;     
             
 
-                response.data.sort( (repo1,repo2)=> ( priority_projects.arduinoprojects.test(repo1.name) || priority_projects.honours.test(repo1.name)  ? -1: 1)) ;     
-                
+                // for(let i=0 ; i <response.data.length ; i++){
+                //     // Print output of project sorting 
+                //     console.log(`${response.data[i].name} : ` );
+
+                // }
                 
                 // response.data.sort( (repo1,repo2)=> {
                     

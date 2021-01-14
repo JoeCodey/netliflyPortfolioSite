@@ -3,6 +3,7 @@ import './App.css';
 import './components/projectList.js' ;
 import ProjectList from './components/projectList.js';
 
+
 function App() {
   return (
 <div className="App">
@@ -67,10 +68,10 @@ function App() {
 
         <p class="lead mb-5">Seeking exciting and fulfilling opportunities to start my career, and to contribute to the development of successful, innovative and creative technologies that make an impact on how people live and work.</p>
         <div class="social-icons">
-          <a href="https://www.linkedin.com/in/joseph-lefebvre123/" target="_blank">
+          <a href="https://www.linkedin.com/in/joseph-lefebvre123/">
             <i class="fab fa-linkedin-in"></i>
           </a>
-          <a href="https://github.com/JoeCodey" target="_blank">
+          <a href="https://github.com/JoeCodey">
             <i class="fab fa-github"></i>
           </a>
           {/* 
