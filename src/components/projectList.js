@@ -152,7 +152,7 @@ function githubAPI_GET_Projects(githubAPI_URL, username){
                 for (let i = 0 ; i < response.data.length ; i++){
                     if(response.data[i].fork){
                         // skip forked repos
-                        console.log("fork skipped")
+                        console.log("forked repo skipped")
                         continue;
                     }
                     projectList_array.push(<IndivProject language={response.data[i].language} 
