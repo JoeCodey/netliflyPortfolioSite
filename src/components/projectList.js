@@ -49,7 +49,7 @@ class ProjectList extends React.Component{
         <div class="project-list">
             <hr class="m-0"/>
 
-            <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="experience">
+            <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="projects">
             
             
                 <div class="w-100">
@@ -58,10 +58,18 @@ class ProjectList extends React.Component{
                 {githubAPI_GET_Projects(baseURL,gitUsername)}
                     
               </div>
+              
 
             </section>
-       
-        </div> 
+             {/* <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" >
+                    <div class="w-100">
+                                <h2 class="mb-5"> Forked for Research</h2>
+
+                                {githubAPI_GET_Projects(baseURL,gitUsername)}
+                                    
+                            </div>
+            </section>  */}
+            </div> 
         );
         }
     
@@ -88,7 +96,7 @@ function githubAPI_GET_Projects(githubAPI_URL, username){
                 return (<div>Loading...</div>)
                 }
                 else if(response !== null) {
-                console.log(response.data)
+                //console.log(response.data)
 
                 {/**
                     Push projects with arduino and datascience in repositiory titile 
@@ -98,17 +106,15 @@ function githubAPI_GET_Projects(githubAPI_URL, username){
                 for(let i=0 ; i <response.data.length ; i++){
                     if(priority_projects.honours.test(response.data[i].name)){
                         
-                        if(response.data[i].fork){
-                            // skip forked repos
-                            continue;
-                        }
+                        
+                    
                         //force Honours project to be 3rd in list 
                         let temp = response.data[3] ; //save current project in 4th position of website
                         response.data[3] = response.data[i] ;
                         response.data[i] = temp ; 
                     }
-                    
-                    console.log(`${response.data[i].name} : ${priority_projects.arduinoprojects.test(response.data[i].name)}` );
+                    console.log(`${response.data[i].name} : ${response.data[i].fork}` );
+                    //console.log(`${response.data[i].name} : ${priority_projects.arduinoprojects.test(response.data[i].name)}` );
 
                 }
                 
@@ -144,6 +150,11 @@ function githubAPI_GET_Projects(githubAPI_URL, username){
 
 
                 for (let i = 0 ; i < response.data.length ; i++){
+                    if(response.data[i].fork){
+                        // skip forked repos
+                        console.log("fork skipped")
+                        continue;
+                    }
                     projectList_array.push(<IndivProject language={response.data[i].language} 
                     name={response.data[i].name} 
                     description={response.data[i].description} 
