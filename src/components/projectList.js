@@ -88,7 +88,7 @@ function githubAPI_GET_Projects(githubAPI_URL, username){
                 return (<div>Loading...</div>)
                 }
                 else if(response !== null) {
-                {console.log(response.data)}
+                console.log(response.data)
 
                 {/**
                     Push projects with arduino and datascience in repositiory titile 
@@ -97,12 +97,18 @@ function githubAPI_GET_Projects(githubAPI_URL, username){
                 
                 for(let i=0 ; i <response.data.length ; i++){
                     if(priority_projects.honours.test(response.data[i].name)){
+                        
+                        if(response.data[i].fork){
+                            // skip forked repos
+                            continue;
+                        }
                         //force Honours project to be 3rd in list 
                         let temp = response.data[3] ; //save current project in 4th position of website
                         response.data[3] = response.data[i] ;
                         response.data[i] = temp ; 
                     }
-                    //console.log(`${response.data[i].name} : ${priority_projects.arduinoprojects.test(response.data[i].name)}` );
+                    
+                    console.log(`${response.data[i].name} : ${priority_projects.arduinoprojects.test(response.data[i].name)}` );
 
                 }
                 
