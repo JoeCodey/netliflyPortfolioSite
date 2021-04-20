@@ -1,9 +1,22 @@
 import React, {Component} from 'react' ;  
 import { AxiosProvider, Request, Get, Delete, Head, Post, Put, Patch, withAxios } from 'react-axios'
+import ReactMarkdown from "react-markdown" ; 
+import {render} from 'react-dom' ;
 const fs = require('fs') ;
 
 var baseURL = 'https://api.github.com' ;
 var gitUsername = 'JoeCodey' ;
+
+const markdown = `
+# Header 1
+## Header 2
+
+_ italic _
+
+** bold **
+
+<b> bold Html </b>
+`;
 
 class IndivProject extends React.Component{
 
@@ -17,17 +30,20 @@ class IndivProject extends React.Component{
         }
 
     }
+
+   renderMarkdown(data) {
+        return(
+        <ReactMarkdown>{this.props.description}</ReactMarkdown>
+        )
+    }
     render (){
         return(
             <div class="git-repo"> 
             <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-                <div class="resume-content">
-
+                <div id={this.props.name} class="resume-content">
                 <h3 class="mb-0">{this.props.name}</h3>
                     <div class="subheading mb-3">{this.props.language}</div>
-
-                <p>{this.props.description}</p>
-
+                    {this.renderMarkdown()}
                 </div>
                 <div class="resume-date text-md-right">
                 <span class="text-primary"><a href={this.props.svn_url} target="_blank">See more detail on Github! <i class="fab fa-github"> </i> </a></span>
@@ -50,8 +66,6 @@ class ProjectList extends React.Component{
             <hr class="m-0"/>
 
             <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="projects">
-            
-            
                 <div class="w-100">
                   <h2 class="mb-5">Projects</h2>
 
