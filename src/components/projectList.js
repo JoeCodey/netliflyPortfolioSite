@@ -7,16 +7,6 @@ const fs = require('fs') ;
 var baseURL = 'https://api.github.com' ;
 var gitUsername = 'JoeCodey' ;
 
-const markdown = `
-# Header 1
-## Header 2
-
-_ italic _
-
-** bold **
-
-<b> bold Html </b>
-`;
 
 class IndivProject extends React.Component{
 
