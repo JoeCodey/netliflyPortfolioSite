@@ -11,11 +11,10 @@ function App() {
       <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet"/>
       <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet"/>
       <link href="./vendor/fontawesome-free/css/all.min.css" rel="stylesheet"/>
+       <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/> 
+       <link href="./css/resume.min.css" rel="stylesheet"/>
 
       {/* <!-- Custom styles for this template --> */}
-      <link href="./css/resume.min.css" rel="stylesheet"/>
-
-    
   
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
     <a class="navbar-brand js-scroll-trigger" href="#page-top">
@@ -87,43 +86,6 @@ function App() {
     
 
     <ProjectList />
-
-
-   
-{/** 
-    <hr class="m-0">
-
-<section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="experience">
-
-
-    <div class="w-100">
-      <h2 class="mb-5">Projects</h2>
-
-
-    {{#each repoInfo}}
-
-
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-
-            <h3 class="mb-0">{{name}}</h3>
-              <div class="subheading mb-3">{{language}}</div>
-
-            <p>{{description}}</p>
-
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary"><a href={{svn_url}}>See more detail on Github! <i class="fab fa-github"> </i> </a></span>
-          </div>
-        </div>
-
-    {{/each}}
-
-
-  </div>
-
-</section>
- */}
 
 <hr class="m-0"/>
 
@@ -208,9 +170,7 @@ function App() {
 
 
   {/** closing body tag for all resume components (project, education ...) */}
-  
-  
-    
+   
 </div>
   );
 }
