@@ -39,7 +39,7 @@ const LanguageBreakdownBar = ({ratios}) => {
         let legendItems = []
        
             Object.keys(ratios).forEach(key=>{
-                legendItems.push(<span className={"w3-tag w3-padding w3-tiny "+languageColours(key)} >{key}</span>)
+                legendItems.push(<span className={"w3-tag w3-padding w3-small "+languageColours(key)} >{key}</span>)
             })
     
         return(<div style={{paddingBottom: '8px'}}> {legendItems} </div> )
@@ -51,7 +51,7 @@ const LanguageBreakdownBar = ({ratios}) => {
 
             Object.keys(ratios).forEach(key=>{
                 eachLangRatio.push(
-                <span className={"Progress-item w3-container w3-center w3-tiny " + languageColours(key)} aria-label="C++" 
+                <span className={"Progress-item w3-container w3-center w3-small " + languageColours(key)} aria-label="C++" 
                 style={{backgroundColor: languageColours(key), width: ratios[key] +'%',padding: '2px'}}>
 
                     {ratios[key] > 3 && ratios[key]+'%'}  
