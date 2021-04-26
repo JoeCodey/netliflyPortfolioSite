@@ -1,7 +1,9 @@
 import React from 'react';
 import './App.css';
 import './components/projectList.js' ;
+import './components/contactForm.js'
 import ProjectList from './components/projectList.js';
+import ContactForm from './components/contactForm.js';
 
 
 function App() {
@@ -64,25 +66,32 @@ function App() {
               <a href="mailto:name@email.com"> joseph10005@gmail.com </a>
           </div>
         </div>
-
-        <p class="lead mb-5">Seeking exciting and fulfilling opportunities to start my career, and to contribute to the development of successful, innovative and creative technologies that make an impact on how people live and work.</p>
-        <div class="social-icons">
+ <div class="social-icons mb-3" >
           <a href="https://www.linkedin.com/in/joseph-lefebvre123/" target="_blank">
             <i class="fab fa-linkedin-in"></i>
           </a>
           <a href="https://github.com/JoeCodey" target="_blank">
             <i class="fab fa-github"></i>
           </a>
-          {/* 
-          <!-- <a href="#">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="#">
-            <i class="fab fa-facebook-f"></i>
-          </a> --> */}
+         
         </div>
+        <p class="lead mb-3">Seeking exciting and fulfilling opportunities to start my career, and to contribute to the development of successful, innovative and creative technologies that make an impact on how people live and work.</p>
+         
+         <ContactForm  /> 
+
+         
+     
+     
+
+        
+         
+        
+       
       </div>
+        
     </section>
+   
+
     
 
     <ProjectList />
