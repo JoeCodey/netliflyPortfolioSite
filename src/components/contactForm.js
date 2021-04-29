@@ -83,11 +83,16 @@ class ContactForm extends React.Component {
       e.preventDefault();
     };
 
-    handleChange = e => this.setState({ [e.target.name]: e.target.value });
+    handleChange = e => {
+      e.preventDefault() ; 
+      this.setState( {formsubmission: { ...this.state.formsubmission, [e.target.name]: e.target.value}})
+      // console.log(`${e.target.name}: ${e.target.value}`)
+      // console.log(this.state.formsubmission)
+    }
 
     handleDropdown = (flag) => {
        flag = (flag === ' ' ? ' w3-show' : ' ' ) 
-      this.setState( {showDropdownFlag: flag} ); 
+      this.setState({showDropdownFlag: flag} );
     };
 
     render() {
