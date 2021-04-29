@@ -62,7 +62,11 @@ const encode = (data) => {
 class ContactForm extends React.Component {
     constructor(props) {
       super(props);
-      this.state = { name: "", organization: "", email: "", message: ""};
+      this.state = { 
+        formsubmission:{ name: "", organization: "", email: "", message: ""},
+        showDropdownFlag: " "
+    };
+      
     }
 
     /* Here’s the juicy bit for posting the form submission */
@@ -71,7 +75,7 @@ class ContactForm extends React.Component {
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({ "form-name": "contact", ...this.state })
+        body: encode({ "form-name": "contact", ...this.state.formsubmission })
       })
         .then(() => alert("Success!"))
         .catch(error => alert(error));
@@ -81,13 +85,18 @@ class ContactForm extends React.Component {
 
     handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
+    handleDropdown = (flag) => {
+       flag = (flag === ' ' ? ' w3-show' : ' ' ) 
+      this.setState( {showDropdownFlag: flag} ); 
+    };
+
     render() {
       const { name, email, message, organization } = this.state;
       return (
-        <div className={"w3-conatiner"} >
-            <div className={'w3-dropdown-hover '}>
-                <button className={"w3-button","w3-blue"}>Contact Me!</button>
-                <div className={"w3-dropdown-content "} >
+        <div className={"w3-conatiner mb-5"} >
+            <div className={'w3-click w3-dropdown-click '}>
+                <button onClick={() =>{this.handleDropdown(this.state.showDropdownFlag)}} className={"w3-button","w3-blue"}>Contact Me! </button>
+                <div className={"w3-dropdown-content " + this.state.showDropdownFlag}  >
                     <form onSubmit={this.handleSubmit} className={"w3-container","w3-row-padding"} style={{width:'300%'}}>
                         <div class="w3-half">
                             <p>
