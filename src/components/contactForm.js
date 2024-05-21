@@ -123,7 +123,8 @@ class ContactForm extends React.Component {
                             <p>
                                 <label> Message:  </label></p>
                                 <textarea name="message" value={message} onChange={this.handleChange} />
-                               
+                        
+                        <div data-netlify-recaptcha="true"></div>       
                         <p>
                             <button className={"w3-button","w3-blue"} type="submit">Send</button>
                         </p>
