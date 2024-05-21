@@ -102,7 +102,7 @@ class ContactForm extends React.Component {
             <div className={'w3-click w3-dropdown-click '}>
                 <button onClick={() =>{this.handleDropdown(this.state.showDropdownFlag)}} className={"w3-button","w3-blue"}>Contact Me! </button>
                 <div className={"w3-dropdown-content " + this.state.showDropdownFlag}  >
-                    <form onSubmit={this.handleSubmit} className={"w3-container","w3-row-padding"} style={{width:'300%'}} data-netlify="true" data-netlify-honeypot="bot-field" >
+                    <form onSubmit={this.handleSubmit} className={"w3-container","w3-row-padding"} style={{width:'300%'}} data-netlify="true" data-netlify-honeypot="bot-field" name="contact" >
                         <div class="w3-half">
                             <p>
                                 <label>
